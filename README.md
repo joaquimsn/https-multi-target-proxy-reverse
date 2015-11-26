@@ -1,2 +1,2 @@
-# multi-hostname-proxy-reverse
-Manage multiple hostnames with this app.
+# https-multi-target-proxy-reverse
+Manage multi target under https connection
