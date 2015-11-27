@@ -9,7 +9,6 @@ var http          = require('http'),
     proxy         = httpProxy.createProxyServer(),
     fs            = require('fs');
 
-
 var httpsOptions = {
   key: fs.readFileSync(config.key, 'utf8'),
   cert: fs.readFileSync(config.cert, 'utf8')
@@ -34,9 +33,7 @@ serverHttps.listen(config.serverHttpsPort);
 
 var serverHttp = http.createServer(function(req, res) {
   var host =  req.headers.host;
-  console.log(req.headers);
-  console.log('host ' + host);
-  res.writeHead(302, {'Location': 'https://' + host.replace(':3080', ':3443')+ req.url});
+  res.writeHead(302, {'Location': 'https://' + host + req.url});
   res.end();
 });
 

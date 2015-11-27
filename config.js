@@ -6,6 +6,6 @@ module.exports = {
   'sources': {
     'test': './test/*Spec.js'
   },
-  'cert': './certificate/jsn-certificate.pem',
-  'key' : './certificate/jsn-private-key.pem'
+  'cert': './certificate/cert.pem',
+  'key' : './certificate/private-key.pem'
 };
